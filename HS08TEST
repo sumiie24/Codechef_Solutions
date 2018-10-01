@@ -1,0 +1,21 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+int main()
+{
+	int x;
+	float y,bal;
+
+     	scanf("%d %f",&x,&y);
+		
+		if(y-0.50>=x && x%5==0)
+			{
+			bal=y-x-(0.50);
+			printf("%.2f",bal);
+	}
+	else 
+	{
+		printf("%f",y);
+	}
+	return 0;
+}
