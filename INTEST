@@ -1,0 +1,27 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+int main()
+{
+	long int n,i,k,c=0;
+	
+	scanf("%d",&n);
+	scanf("%d",&k);
+	
+	long int t[n];
+	
+	for(i=0;i<n;i++)
+		{
+		scanf("%d",&t[i]);
+		}
+		
+	for(i=0;i<n;i++)
+		{
+			if(t[i]%k==0)
+				c++;
+		}	
+
+
+printf("\n%d",c);
+return 0;
+}
