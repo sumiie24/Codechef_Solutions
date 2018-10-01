@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+
+  long long int t,n,p,x,y;
+
+    scanf("%llu",&t);
+    while(t--){
+        scanf("%llu%llu%llu%llu",&n,&p,&x,&y);
+
+            if(n==1 && p==1 || n==2 && p==2 || x==1 && y==1){
+                 printf("Chefirnemo\n");
+            }
+            else{
+
+
+
+
+                if(x+1>n && y+1>p)
+                    printf("Pofik\n");
+                else{
+
+
+
+
+                    if(((n-2)%x==0 && (p-2)%y==0) || ((n-1)%x==0 && (p-1)%y==0))
+                        printf("Chefirnemo\n");
+                    else
+                        printf("Pofik\n");
+                }}}
+
+return 0;
+}
