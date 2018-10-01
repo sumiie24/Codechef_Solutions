@@ -1,0 +1,96 @@
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+int main()
+{
+
+    long int n;
+	scanf("%ld",&n);
+
+    long int c[n]={0},t[n]={0},min1,min2,min3,minsum,i,x[n]={0},y[n]={0},z[n]={0};
+	min1=0;
+	min2=0;
+	min3=0;
+	minsum=0;
+
+	for(i=0;i<n;i++)
+		scanf("%ld",&c[i]);
+
+	for(i=0;i<n;i++)
+		scanf("%ld",&t[i]);
+
+	int o=0,p=0,q=0;
+
+	for(int j=0;j<n;j++)
+			{
+			if(t[j]==1)
+				{
+					x[o]=c[j];
+					o++;
+				}
+
+			if(t[j]==2)
+				{
+					y[p]=c[j];
+					p++;
+				}
+
+			if(t[j]==3)
+				{
+					z[q]=c[j];
+					q++;
+				}
+			}
+
+	min1=x[0];
+	for(i=1;i<o;i++)
+				{
+					if(x[i]<min1 && x[i]!=0)
+						{
+						min1=x[i];
+						}
+				}
+
+	min2=y[0];
+	for(i=1;i<p;i++)
+				{
+					if(y[i]<min2 && y[i]!=0)
+						{
+						min2=y[i];
+						}
+				}
+
+	min3=z[0];
+	for(i=1;i<q;i++)
+				{
+					if(z[i]<min3 && z[i]!=0)
+						{
+						min3=z[i];
+						}
+				}
+
+    //cout<<"min1 =  "<<min1<<" min2 ="<<min2<<" min3= "<<min3<<"\n";
+	minsum=min1+min2;
+
+    if(min3==0)
+        {printf("%ld",minsum);}
+
+    if(min1==0 || min2==0)
+        {printf("%ld",min3);}
+
+    if(min1!=0 && min2!=0 && min3!=0)
+    {
+        if(minsum<min3)
+            {printf("%ld",minsum);}
+
+        if(minsum>min3)
+            {printf("%ld",min3);}
+
+        if(minsum==min3)
+            {printf("%ld",minsum);}
+
+    }
+return 0;
+
+}
